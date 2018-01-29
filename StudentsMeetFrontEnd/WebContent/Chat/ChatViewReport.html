@@ -1,0 +1,18 @@
+<div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<center><h2>Your Report</h2></center>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Chat ID</th>
+        <th>Reporter ID</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<td>{{report.chat_reportId}}</td>
+    	<td>{{report.userID}}</td>
+    	<td>Not Processed</td>
+    </tbody>
+</table>
+</div>

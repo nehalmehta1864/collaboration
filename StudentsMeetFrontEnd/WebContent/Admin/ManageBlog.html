@@ -1,0 +1,22 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="BlogController as btrl">
+<center><h1>List of reported Blog Comments</h1></center>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Blog Id</th>
+        <th>User ID</th>
+        <th>Comment Text</th>
+        <th>Remove Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in repcom">
+        <td>{{x.blogID}}</td>
+        <td>{{x.commentUserId}}</td>
+        <td>{{x.commentText}}</td>        
+        <td><button class="btn btn-default" ng-click='btrl.removeComment(x.commentID)' >Remove Comment</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

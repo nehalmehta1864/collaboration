@@ -1,0 +1,64 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 5px solid BLUE;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 {
+    width: 50%;    
+    background-color: #00FF00;
+}
+</style>
+</head>
+<body>
+
+
+<br>
+
+<table id="t01">
+  <tr>
+    <th>VIEW OPEN CHAT</th>
+    <th>CREATE OPEN CHAT</th> 
+    
+  </tr>
+  <tr>
+    <td><a href="#" data-toggle="tooltip" data-placement="top" title="Create a blog and share what you know">
+<button class="btn btn-danger" ng-click="ctrl.getAllAvailableChat()">View Open Chat</button>
+</a></td>
+    <td><a href="#" data-toggle="tooltip" data-placement="top" title="View the blogs in our website">
+<button class="btn btn-danger" ng-click=""><a href="#!/goChaCreate">Create new Chat</a></button>
+</a></td>
+  
+  </tr>
+ 
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<button class="btn btn-success" ng-click="ctrl.getAllAvailableChat()">View Open Chat</button>
+<button class="btn btn-success" ng-click=""><a href="#!/goChaCreate">Create new Chat</a></button>
+<button class="btn btn-success" ng-click=""><a href="#!/goSocketChat">Socket Chat</a></button>
+<div ng-if="isAdmin">
+  <button type="button" class="btn btn-success" ng-click="ctrl.manageChat()">Manage Chats</button>
+</div>
+</div> -->

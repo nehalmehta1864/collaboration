@@ -1,0 +1,7 @@
+<div ng-include="'Blog/BlogHome.html'"></div>
+<div ng-controller="BlogController as btrl">
+Comment : <p>{{comment.commentText}}</p><br>
+by {{comment.commentUserId}} on {{comment.commentDate}} has been reported thanks for keeping the site safe.
+<br/>
+<button class="btn btn-success" ng-click="btrl.continueBlog()">Continue reading blog</button>
+</div>

@@ -1,0 +1,61 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="UserController as ctrl">
+<center><p><font size="50" color="red">REGISTRATION!!</font></p></center>
+<center>
+<form ng-submit="ctrl.submit()" class="form-horizontal" name="regForm">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="userid">USER-ID ::</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="userid" placeholder="Enter userID"  ng-model="ctrl.user.userID">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="username">USERNAME ::</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="username" placeholder="Enter username"  ng-model="ctrl.user.userName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="firstname">FIRSTNAME ::</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="firstname" placeholder="ENTER FIRSTNAME"  ng-model="ctrl.user.firstname">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="lastname">LASTNAME ::</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="LASTNAME" placeholder="ENTER LASTNAME"  ng-model="ctrl.user.lastname">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="userpassword">PASSWORD ::</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="userpassword" placeholder="Enter User password"  ng-model="ctrl.user.userPassword">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="PHONE">PHONE NO. ::</label>
+    <div class="col-sm-10">
+      <input type="PHONE" class="form-control" id="phone" placeholder="ENTER PHONE NO."  ng-model="ctrl.user.phone">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="EMAIL">EMAIL-ID ::</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="email" placeholder="ENTER EMAIL-ID"  ng-model="ctrl.user.email">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+	<input class="btn btn-success" type="submit" value="Register" >
+	<button class="btn btn-danger" type="button" ng-click="ctrl.reset()">Reset</button>
+	</div>
+	</div>
+	<!-- <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+	<button type="button" ng-click="ctrl.reset()">Reset</button>
+	</div>
+	</div> -->
+</form>
+</center>
+</div>

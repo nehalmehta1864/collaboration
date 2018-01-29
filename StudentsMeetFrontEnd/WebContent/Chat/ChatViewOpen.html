@@ -1,0 +1,71 @@
+<div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<h1><center>ACTIVE OPEN CHAT ONLINE</center></h1>
+<center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 5px solid RED;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 {
+    width: 50%;    
+    background-color: #00FF00;
+}
+</style>
+</head>
+<body>
+
+
+<br>
+
+<table id="t01">
+  <tr>
+    <th>CHAT TOPIC</th>
+    <th>CHAT CREATOR</th> 
+    <th>JOIN CHAT</th>
+  </tr>
+ </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="x in chats">
+    	<td>{{x.chatTopic}}</td>
+    	<td>{{x.creatorID}}</td>
+        
+    	<td><button class="btn btn-danger" ng-click="ctrl.joinOpenChat(x.chatId)">Join Chat</button></td>
+	    </tr>
+    </tbody>
+
+
+</html>
+
+
+
+
+
+<!-- <div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<h1><center>List of Avtive Open Chats</center></h1>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Chat Topic</th>
+        <th>Chat Creator</th>
+        <th>Join Chat</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="x in chats">
+    	<td>{{x.chatTopic}}</td>
+    	<td>{{x.creatorID}}</td>
+    	<td><button class="btn btn-default" ng-click="ctrl.joinOpenChat(x.chatId)">Join Chat</button></td>
+	    </tr>
+    </tbody>
+</table>
+</div> -->

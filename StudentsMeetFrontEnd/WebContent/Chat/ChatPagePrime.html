@@ -1,0 +1,29 @@
+<div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<div ng-if="chat.isPrivateChat==='N'">
+<center><h1>{{chat.chatTopic}}</h1></center>
+</div>
+<div ng-if="chat.isPrivateChat==='Y'">
+<center><h1>Private Chat : {{chat.creatorID}} {{chat.friendID}}</h1></center>
+</div>
+<div class="row">
+<!--  
+<div class="col-sm-4">
+<button class="btn btn-danger" ng-click="ctrl.quitChat()">Stop Chat</button>
+</div>-->
+<div class="col-sm-4">
+<button class="btn btn-danger" ng-click="ctrl.repChat(chat.chatId)">Report Chat</button>
+</div>
+</div>
+<br/>
+<form ng-submit="ctrl.addMessage()">
+<input type="text" ng-model="ctrl.chatMsg.chatMsg"><br/>
+<input type="submit" value="Send">
+
+<p ng-repeat="message in chat.chat_Messages">
+        <time>{{message.msgDate | date:'HH:mm'}}</time>
+        {{message.userID}}
+        <span ng-class="{self: chatMsg.self}">{{message.chatMsg}}</span>
+      </p>
+</form>
+</div>

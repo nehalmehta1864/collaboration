@@ -1,0 +1,19 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Chat ID</th>
+        <th>Reporter ID</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="x in reports">
+    	<td>{{x.chat_reportId}}</td>
+    	<td>{{x.userID}}</td>
+    	<td><button class="btn btn-default" ng-click="ctrl.removeChat(x.chatID)">Remove Chat</button></td>
+	    </tr>
+    </tbody>
+</table>
+</div>

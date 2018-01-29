@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<style>
+.navbar-custom {
+    background-color: #CC0000;
+    border-color: #AA0000;
+    border-radius: 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #FFF;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #FFF;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    background-color: #AA0000;
+}
+
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #AA0000;
+}
+
+.navbar-custom .navbar-text {
+    color: #FFF;
+}
+
+.navbar-custom .navbar-toggle {
+    border-color: #AA0000;
+}
+
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #AA0000;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Bootstrap Navbar Color</title>
+    <link href="path/to/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="path/to/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<nav class="navbar navbar-custom" role="navigation">
+    <div class="container-fluid">
+        <!-- logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">FRIEND BOOK</a>
+        </div>
+        <!-- menu -->
+        <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!/goUserHome">HOME</a></li>
+                <li><a href="#!/goBlogHome">BLOG</a></li>
+                <li><a href="#!/goForumHome">FORUM</a></li>
+                <li><a href="#!/goJobHome">JOBS</a></li>
+                <li><a href="#!/goFriendHome">FRIEND</a></li>
+               
+                      <li class="active"><a href="#!/goChatHome">Chat</a></li>
+               
+                         <div ng-controller="UserController as ctrl">
+    <button class="btn btn-danger navbar-btn" ng-click="ctrl.logout()">Logout</button>
+   </div>  
+            </ul>
+    
+        </div>
+    </div>
+</nav>
+
+<script src="path/to/jquery-1.10.2.js"></script>
+<script src="path/to/bootstrap.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+     <a class="navbar-brand" href="#">FRIENDBOOK</a>
+  </div>
+  <ul class="nav navbar-nav">
+      <li class="active"><a href="#!/goUserHome">Home</a></li>
+      <li class="active"><a href="#!/goBlogHome">Blog</a></li>
+      <li class="active"><a href="#!/goForumHome">Forum</a></li>
+       <li class="active"><a href="#!/goJobHome">Job</a></li>
+      <li class="active"><a href="#!/goFriendHome">Friend</a></li>
+   </ul>
+   <div ng-controller="UserController as ctrl">
+    <button class="btn btn-danger navbar-btn" ng-click="ctrl.logout()">Logout</button>
+   </div>
+</div>
+</nav> -->

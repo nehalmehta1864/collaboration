@@ -1,0 +1,22 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ForumController as ftrl">
+<center><h1>List of reported Forum Messages</h1></center>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Forum Id</th>
+        <th>User ID</th>
+        <th>Message Text</th>
+        <th>Remove Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in repforum">
+        <td>{{x.forumId}}</td>
+        <td>{{x.userId}}</td>
+        <td>{{x.msgData}}</td>        
+        <td><button class="btn btn-default" ng-click='ftrl.removeMessage(x.forumMessageID)' >Remove Message</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

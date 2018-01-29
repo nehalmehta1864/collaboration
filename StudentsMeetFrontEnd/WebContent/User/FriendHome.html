@@ -1,0 +1,73 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="UserController as ctrl">
+<center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 5px solid BLUE;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 {
+    width: 50%;    
+    background-color: AQUA;
+}
+</style>
+</head>
+<body>
+
+
+<br>
+
+<table id="t01">
+  <tr>
+  
+    <th><centre>VIEW FRIENDS<centre></th>
+
+  </tr>
+  <tr>
+    <td>
+<div ng-if="isUser">
+<button type="button" class="btn btn-success" ng-click="ctrl.getCurrentUserFriend()">View Friends</button>
+  <tr>
+  
+    <th><centre>ADD FRIENDS<centre></th>
+
+  </tr>
+  <tr>
+    <td>
+<button type="button" class="btn btn-success" ng-click="ctrl.getAllUsers()">Add friends</button>
+
+</div>
+</center>
+
+  <tr>
+  
+    <th><centre>VIEW FRIEND REQUEST<centre></th>
+
+  </tr>
+  <tr>
+    <td>
+<button type="button" class="btn btn-success" ng-click="ctrl.getFriendRequests()">View Friend Requests</button>
+
+</div>
+</center>
+<!-- <div class="row">
+<div class="col-sm-4">
+<button type="button" class="btn btn-success" ng-click="ctrl.getCurrentUserFriend()">View Friends</button>
+
+<button type="button" class="btn btn-success" ng-click="ctrl.getAllUsers()">Add friends</button>
+
+<button type="button" class="btn btn-success" ng-click="ctrl.getFriendRequests()">View Friend Requests</button>
+</div>
+</div> -->
+<br/>
+<!-- <div ng-controller="ChatController as cctrl">
+<button type="button" class="btn btn-warning" ng-click="cctrl.getPrivateChats()">View Private Chats</button>
+</div> -->
+</div>

@@ -1,0 +1,57 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ForumController as ftrl">
+<!-- <center>
+<div class="row">
+
+<button type="button" class="btn btn-success" ng-click="ftrl.getForums()">View Forums</button>
+<div ng-if="isAdmin">
+  <button type="button" class="btn btn-success" onclick=""><a href="#!/goForumCreate">Create Forum</a></button>
+  <button type="button" class="btn btn-success" ng-click="ftrl.manageForum()">Manage Forums</button>
+  <button type="button" class="btn btn-success" ng-click="">Update Forum</button>
+</div>
+</div>
+</center>
+</div> -->
+
+<center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 5px solid BLUE;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 {
+    width: 50%;    
+    background-color: AQUA;
+}
+</style>
+</head>
+<body>
+
+
+<br>
+
+<table id="t01">
+  <tr>
+  
+    <th><centre>VIEW FORUMS<centre></th>
+
+  </tr>
+  <tr>
+    <td>
+<button type="button" class="btn btn-success" ng-click="ftrl.getForums()">View Forums</button>
+<div ng-if="isAdmin">
+  <button type="button" class="btn btn-success" onclick=""><a href="#!/goForumCreate">Create Forum</a></button></td>
+
+  </tr>
+ 
+</table>
+
+</body>
+</html>

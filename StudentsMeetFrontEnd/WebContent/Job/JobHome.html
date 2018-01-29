@@ -1,0 +1,66 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="JobController as jtrl">
+<center>
+<center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 5px solid BLUE;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 {
+    width: 50%;    
+    background-color: AQUA;
+}
+</style>
+</head>
+<body>
+
+
+<br>
+
+<table id="t01">
+  <tr>
+  
+    <th><centre>VIEW JOBS<centre></th>
+
+  </tr>
+  <tr>
+    <td>
+<div ng-if="isUser">
+
+<button class="btn btn-info" ng-click="jtrl.getJobs()">View Jobs</button>
+  <tr>
+  
+    <th><centre>MY JOBS APPLICATIONS<centre></th>
+
+  </tr>
+  <tr>
+    <td>
+<button class="btn btn-info" ng-click="jtrl.getUserAppl()">My Job Apllications</button>
+</div>
+</center>
+
+<div ng-if="isAdmin">
+<a href="#" data-toggle="tooltip" data-placement="top" title="Post new Job Offers in website">
+<button class="btn btn-info"><a href="#!/goPostJob">Post Job</a></button>
+</a>
+<button class="btn btn-info" ng-click="jtrl.getJobsAdmin()">View Jobs</button>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Manage Job Applications of users">
+<button class="btn btn-info" ng-click="jtrl.getJobApplications()">Manage Job Application</button>
+</a>
+</div>
+</center>
+</div>
+  </tr>
+ 
+</table>
+
+</body>
+</html>

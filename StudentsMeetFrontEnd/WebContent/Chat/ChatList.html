@@ -1,0 +1,70 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 5px solid BLUE;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 {
+    width: 50%;    
+    background-color: ROSE;
+}
+</style>
+</head>
+<body>
+
+
+<br>
+
+<table id="t01">
+    <thead>
+      <tr>
+        <th>FRIENDS ID</th>
+        <th>ONLINE STATUS</th>
+        <th>WELCOME TO CHAT</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="x in friends">
+    	<td>{{x.friendId}}</td>
+    	<td>{{x.isOnline}}</td>
+    	<td><button class="btn btn-success" ng-click="">INVITE</button></td>
+	    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
+
+
+
+
+<!-- <div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<center><h2>Your Friends</h2></center>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Friend ID</th>
+        <th>Online Status</th>
+        <th>Invite to Chat</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="x in friends">
+    	<td>{{x.friendId}}</td>
+    	<td>{{x.isOnline}}</td>
+    	<td><button class="btn btn-default" ng-click="">Invite</button></td>
+	    </tr>
+    </tbody>
+</table>
+</div> -->
