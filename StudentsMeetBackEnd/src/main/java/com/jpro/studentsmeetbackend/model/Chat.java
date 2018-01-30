@@ -92,7 +92,7 @@ public class Chat extends BaseDomain {
 
 	public void setFriendID(String friendID) {
 		this.friendID = friendID;
-	}
+	
 
 	
 }
